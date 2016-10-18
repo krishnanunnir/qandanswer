@@ -5,6 +5,10 @@ class Question extends CI_Model{
 	}
 	public $question;
 	public $asked_by;
+	public function get_entry(){
+        $query=$this->db->get('question');
+        return $query->result();
+    }
 	
 }
 ?>
