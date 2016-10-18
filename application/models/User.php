@@ -6,5 +6,9 @@ class User extends CI_Model{
 	public $firstname;
 	public $lastname;
 	public $email;
+	public function get_entry(){
+        $query=$this->db->get('user');
+        return $query->result();
+    }
 }
 ?>
